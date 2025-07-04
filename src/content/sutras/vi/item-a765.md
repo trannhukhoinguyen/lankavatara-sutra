@@ -5,8 +5,8 @@ main:
   id: 2
   content: |
     Découvrez l'ensemble de vis assorties SF-AB A765 – la solution ultime pour vos besoins de fixation. Ce set complet comprend une grande variété de vis soigneusement sélectionnées pour aborder divers projets avec facilité et précision.
-  imgCard: "@/images/sutra-image-2.avif"
-  imgMain: "@/images/sutra-image-main-2.avif"
+  imgCard: "@/images/sutras/zen-mediation-1200x733.jpg"
+  imgMain: "@/images/sutras/zen-mediation-1600x1000.jpg"
   imgAlt: "Boîtes factices de l'ensemble de vis assorties"
 tabs:
   - id: "tabs-with-card-item-1"

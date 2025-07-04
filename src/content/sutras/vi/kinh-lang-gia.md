@@ -4,8 +4,8 @@ description: "Lankavatara sutra"
 main:
   id: 1
   content: Lankavatara sutra | Lankavatara sutra
-  imgCard: "@/images/sutras/zen-mediatation-1600x100.jpg"
-  imgMain: "@/images/sutras/zen-mediatation-1600x100.jpg"
+  imgCard: "@/images/sutras/zen-mediatation-1600x1000.jpg"
+  imgMain: "@/images/sutras/zen-mediatation-1600x1000.jpg"
   imgAlt: "Lankavatara sutra"
   audioUrl: "http://tosuthien.info/audio_storage/htduyluc/kinhlanggia/kinh%20lang%20gia%201.mp3"
   videoUrl: "https://www.youtube.com/embed/vwOi8UCTCp0"
