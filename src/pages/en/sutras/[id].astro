@@ -15,7 +15,7 @@ declare global {
   }
 }
 
-// This gets the static paths for all the unique sutras
+// This gets the static paths
 
 export async function getStaticPaths() {
   const entries = await getCollection("sutras", ({ id }) =>
