@@ -12,8 +12,8 @@ import { getCollection } from "astro:content";
 import type { CollectionEntry } from "astro:content";
 import { SITE } from "@data/constants";
 
-// Fetching all the product related content and sorting it by main.id
-const product: CollectionEntry<"sutras">[] = (
+// Fetching all the sutra related content and sorting it by main.id
+const sutra: CollectionEntry<"sutras">[] = (
   await getCollection("sutras", ({ id }) => {
     return id.startsWith("en/");
   })
@@ -105,16 +105,16 @@ const ogTitle = "Lankavatara sutra | Lankavatara sutra";
       </div>
       <PrimaryCTA title="Lankavatara sutra" url="#testimonials" noArrow={true} />
     </div>
-    {/* Displaying sutras in alternating styles. Alternative product gets different card styling.
-    Maps through all product entries and displays them with either CardSmall or CardWide based on their position. */}
+    {/* Displaying sutras in alternating styles. Alternative sutra gets different card styling.
+    Maps through all sutra entries and displays them with either CardSmall or CardWide based on their position. */}
     <section class="grid grid-cols-1 gap-4 sm:grid-cols-3 md:gap-6 xl:gap-8">
       {
-        product.map((product, index) => {
+        sutra.map((sutra, index) => {
           const position = index % 4;
           if (position === 0 || position === 3) {
-            return <CardSmall product={product} />;
+            return <CardSmall sutra={sutra} />;
           } else {
-            return <CardWide product={product} />;
+            return <CardWide sutra={sutra} />;
           }
         })
       }

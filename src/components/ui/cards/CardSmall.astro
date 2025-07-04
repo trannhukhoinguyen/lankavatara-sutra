@@ -4,11 +4,11 @@ import { Image } from "astro:assets";
 import Icon from "@components/ui/icons/Icon.astro";
 import type { CollectionEntry } from "astro:content";
 
-const { product, productLocale = "" } = Astro.props;
+const { sutra, sutraLocale = "" } = Astro.props;
 
 interface Props {
-  product: CollectionEntry<"sutras">;
-  productLocale?: string;
+  sutra: CollectionEntry<"sutras">;
+  sutraLocale?: string;
 }
 
 // Define classes to be used with the Image component
@@ -16,30 +16,30 @@ const imageClass =
   "absolute inset-0 h-full w-full object-cover object-center transition duration-[600ms] ease-[cubic-bezier(0.45,0,0.55,1)] group-hover:scale-110";
 ---
 
-<!-- A clickable card that leads to the details of the product-->
+<!-- A clickable card that leads to the details of the sutra-->
 <a
-  href={productLocale && productLocale !== "en"
-    ? `/${productLocale}/products/${product.id.replace(/^en\//, "")}/`
-    : `/products/${product.id.replace(/^en\//, "")}/`}
+  href={sutraLocale && sutraLocale !== "en"
+    ? `/${sutraLocale}/sutras/${sutra.id.replace(/^en\//, "")}/`
+    : `/sutras/${sutra.id.replace(/^en\//, "")}/`}
   data-astro-prefetch
   class="group relative flex h-48 items-end overflow-hidden rounded-xl shadow-lg outline-hidden ring-zinc-500 focus-visible:ring-3 dark:ring-zinc-200 dark:focus:outline-hidden md:h-80"
 >
-  <!-- The product's main image -->
+  <!-- The sutra's main image -->
   <Image
-    src={product.data.main.imgCard}
-    alt={product.data.main.imgAlt}
+    src={sutra.data.main.imgCard}
+    alt={sutra.data.main.imgAlt}
     draggable={"false"}
     class={imageClass}
     format={"avif"}
   />
-  <!-- An overlay gradient that sits on top of the product image-->
+  <!-- An overlay gradient that sits on top of the sutra image-->
   <div
     class="pointer-events-none absolute inset-0 bg-linear-to-t from-neutral-800 via-transparent to-transparent opacity-50"
   >
   </div>
-  <!-- The product's subtitle and the anchor SVG icon-->
+  <!-- The sutra's subtitle and the anchor SVG icon-->
   <span
     class="relative mb-3 ml-4 inline-block text-sm font-bold text-neutral-50 transition duration-[600ms] ease-[cubic-bezier(0.45,0,0.55,1)] group-hover:scale-110 md:ml-5 md:text-lg"
-    >{product.data.description} <Icon name="openInNew" />
+    >{sutra.data.description} <Icon name="openInNew" />
   </span>
 </a>

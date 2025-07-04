@@ -1,7 +1,7 @@
 ---
 // Import section components
 import MainLayout from "@/layouts/MainLayout.astro";
-import ProductTabBtn from "@components/ui/buttons/ProductTabBtn.astro";
+import SutraTabBtn from "@components/ui/buttons/SutraTabBtn.astro";
 import PrimaryCTA from "@components/ui/buttons/PrimaryCTA.astro";
 import { Image } from "astro:assets";
 import { getCollection } from "astro:content";
@@ -101,7 +101,7 @@ const ogTitle = `${entry.data.title} | Lankavatara sutra | Lankavatara sutra`;
     >
       {
         entry.data.tabs.map((tab, index) => (
-          <ProductTabBtn
+          <SutraTabBtn
             title={tab.title}
             id={tab.id}
             dataTab={tab.dataTab}
@@ -119,24 +119,24 @@ const ogTitle = `${entry.data.title} | Lankavatara sutra | Lankavatara sutra`;
               <h2
                 class="text-3xl font-bold tracking-tight text-balance text-neutral-800 md:leading-tight lg:text-4xl dark:text-neutral-200"
               >
-                {product.data.longDescription.title}
+                {sutra.data.longDescription.title}
               </h2>
               <p
                 class="mt-3 text-pretty text-neutral-600 dark:text-neutral-400"
               >
-                {product.data.longDescription.subTitle}
+                {sutra.data.longDescription.subTitle}
               </p>
               <p class="mt-5">
                 <PrimaryCTA
-                  title={product.data.longDescription.btnTitle}
-                  url={product.data.longDescription.btnURL}
+                  title={sutra.data.longDescription.btnTitle}
+                  url={sutra.data.longDescription.btnURL}
                 />
               </p>
             </div>
 
             <div class="space-y-6 lg:space-y-10">
               {
-                product.data.descriptionList.map((list) => (
+                sutra.data.descriptionList.map((list) => (
                   <div class="flex">
                     <div>
                       <h3 class="text-base font-bold text-neutral-800 sm:text-lg dark:text-neutral-200">
@@ -174,7 +174,7 @@ const ogTitle = `${entry.data.title} | Lankavatara sutra | Lankavatara sutra`;
             {
               entry.data.specificationsRight ? (
                 <div class="mt-6 max-w-md space-y-6 md:mt-0 md:ml-auto">
-                  {product.data.specificationsRight?.map((spec) => (
+                  {sutra.data.specificationsRight?.map((spec) => (
                     <div>
                       <h3 class="block font-bold text-neutral-800 dark:text-neutral-200">
                         {spec.title}
@@ -185,7 +185,7 @@ const ogTitle = `${entry.data.title} | Lankavatara sutra | Lankavatara sutra`;
                     </div>
                   ))}
                 </div>
-              ) : product.data.tableData ? (
+              ) : sutra.data.tableData ? (
                 <div class="mt-6 space-y-6 md:mt-0 md:ml-auto">
                   <div class="flex flex-col">
                     <div class="-m-1.5 overflow-x-auto">
@@ -255,9 +255,9 @@ const ogTitle = `${entry.data.title} | Lankavatara sutra | Lankavatara sutra`;
 
       <div class="relative right-12 overflow-hidden rounded-xl shadow-xl">
         {
-          product.data.blueprints.second && (
+          sutra.data.blueprints.second && (
             <Image
-              src={product.data.blueprints.second}
+              src={sutra.data.blueprints.second}
               class="h-full w-full object-cover object-center"
               alt="Blueprint Illustration"
               format={"avif"}
