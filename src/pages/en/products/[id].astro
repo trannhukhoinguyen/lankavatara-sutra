@@ -13,10 +13,10 @@ declare global {
     gsap: any;
   }
 }
-// This gets the static paths for all the unique products
+// This gets the static paths for all the unique sutras
 
 export async function getStaticPaths() {
-  const productEntries = await getCollection("products", ({ id }) =>
+  const productEntries = await getCollection("sutras", ({ id }) =>
     id.startsWith("en/")
   );
   return productEntries.map((product) => {
@@ -42,8 +42,8 @@ const ogTitle = `${product.data.title} | Lankavatara sutra | Lankavatara sutra`;
   customOgTitle={ogTitle}
   structuredData={{
     "@context": "https://schema.org",
-    "@type": "Product",
-    "@id": `https://lankavatara-sutra.vercel.app/en/products/${product.data.title.toLowerCase().replace(/\s+/g, "-")}`,
+    "@type": "Lankavatara sutra",
+    "@id": `https://lankavatara-sutra.vercel.app/en/sutras/${product.data.title.toLowerCase().replace(/\s+/g, "-")}`,
     name: product.data.title,
     description: product.data.description,
     brand: {
