@@ -3,11 +3,10 @@ title: "SF-AB A765"
 description: "Ensemble de Vis Assorties"
 main:
   id: 2
-  content: |
-    Découvrez l'ensemble de vis assorties SF-AB A765 – la solution ultime pour vos besoins de fixation. Ce set complet comprend une grande variété de vis soigneusement sélectionnées pour aborder divers projets avec facilité et précision.
-  imgCard: "@/images/sutras/zen-mediation-1200x733.jpg"
-  imgMain: "@/images/sutras/zen-mediation-1600x1000.jpg"
-  imgAlt: "Boîtes factices de l'ensemble de vis assorties"
+  content: Kinh Lăng Già | Kinh Lăng Già
+  imgCard: "/src/images/sutras/zen-mediation-1200x733.jpg"
+  imgMain: "/src/images/sutras/zen-mediation-1600x1000.jpg"
+  imgAlt: "Kinh Lăng Già"
 tabs:
   - id: "tabs-with-card-item-1"
     dataTab: "#tabs-with-card-1"
@@ -20,9 +19,8 @@ tabs:
     title: "Plans"
 longDescription:
   title: "Solutions Polyvalentes de Fixation"
-  subTitle: |
-    L'ensemble de vis assorties SF-AB A765 offre une polyvalence et une commodité inégalées, ce qui en fait le choix idéal pour les amateurs de bricolage et les professionnels. Avec une sélection complète de vis, vous aurez toujours le bon élément de fixation pour chaque tâche.
-  btnTitle: "Contactez les ventes pour en savoir plus"
+  subTitle: Kinh Lăng Già | Kinh Lăng Già
+  btnTitle: "Kinh Lăng Già"
   btnURL: "#"
 descriptionList:
   - title: "Grande Variété"
