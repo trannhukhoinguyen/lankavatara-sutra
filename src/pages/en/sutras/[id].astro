@@ -6,6 +6,7 @@ import PrimaryCTA from "@components/ui/buttons/PrimaryCTA.astro";
 import { Image } from "astro:assets";
 import { getCollection } from "astro:content";
 import { SITE } from "@data/constants";
+import LogoYoutube from "@components/LogoYoutube.astro";
 
 // Global declaration for gsap animation library
 declare global {
@@ -13,44 +14,43 @@ declare global {
     gsap: any;
   }
 }
+
 // This gets the static paths for all the unique sutras
 
 export async function getStaticPaths() {
-  const sutraEntries = await getCollection("sutras", ({ id }) =>
+  const entries = await getCollection("sutras", ({ id }) =>
     id.startsWith("en/")
   );
-  return sutraEntries.map((sutra) => {
-    const idWithoutLang = sutra.id.replace(/^en\//, ""); // Remove the "en/" prefix
+  return entries.map((entry) => {
+    const idWithoutLang = entry.id.replace(/^en\//, ""); // Remove the "en/" prefix
     return {
-      params: { lang: "en", id: idWithoutLang },
-      props: { sutra },
+      params: { id: idWithoutLang },
+      props: { entry },
     };
   });
 }
 
-const { sutra } = Astro.props;
+const { entry } = Astro.props;
 
-const pageTitle: string = `${sutra.data.title} | ${SITE.title}`;
-const metaDescription = sutra.data.description;
-const ogTitle = `${sutra.data.title} | Lankavatara sutra | Lankavatara sutra`;
+const pageTitle: string = `${entry.data.title} | ${SITE.title}`;
+const metaDescription = entry.data.description;
+const ogTitle = `${entry.data.title} | Lankavatara sutra | Lankavatara sutra`;
 ---
 
 <MainLayout
   title={pageTitle}
-  lang="en"
   customDescription={metaDescription}
   customOgTitle={ogTitle}
   structuredData={{
     "@context": "https://schema.org",
     "@type": "Lankavatara sutra",
-    "@id": `https://lankavatara-sutra.vercel.app/en/sutras/${sutra.data.title.toLowerCase().replace(/\s+/g, "-")}`,
-    name: sutra.data.title,
-    description: sutra.data.description,
+    "@id": `https://lankavatara-sutra.vercel.app/sutras/${entry.data.title.toLowerCase().replace(/\s+/g, "-")}`,
+    name: entry.data.title,
+    description: entry.data.description,
     brand: {
       "@type": "Brand",
-      name: "ScrewFast",
+      name: "Lankavatara sutra",
     },
-    inLanguage: "en",
   }}
 >
   <div id="overlay" class="fixed inset-0 bg-neutral-200 dark:bg-neutral-800">
@@ -64,7 +64,7 @@ const ogTitle = `${sutra.data.title} | Lankavatara sutra | Lankavatara sutra`;
         id="fadeText"
         class="mb-8 max-w-prose font-light text-pretty text-neutral-700 sm:text-xl dark:text-neutral-300"
       >
-        {sutra.data.main.content}
+        {entry.data.main.content}
       </p>
     </div>
     <div
@@ -74,18 +74,18 @@ const ogTitle = `${sutra.data.title} | Lankavatara sutra | Lankavatara sutra`;
         <h1
           class="block text-4xl font-bold tracking-tighter text-neutral-800 sm:text-5xl md:text-6xl lg:text-7xl dark:text-neutral-200"
         >
-          {sutra.data.title}
+          {entry.data.title}
         </h1>
         <p class="text-lg text-neutral-600 dark:text-neutral-400">
-          {sutra.data.description}
+          {entry.data.description}
         </p>
       </div>
       <div>
         <Image
           id="fadeInMoveRight"
-          src={sutra.data.main.imgMain}
+          src={entry.data.main.imgMain}
           class="w-[600px]"
-          alt={sutra.data.main.imgAlt}
+          alt={entry.data.main.imgAlt}
           format={"avif"}
           loading={"eager"}
         />
@@ -100,7 +100,7 @@ const ogTitle = `${sutra.data.title} | Lankavatara sutra | Lankavatara sutra`;
       role="tablist"
     >
       {
-        sutra.data.tabs.map((tab, index) => (
+        entry.data.tabs.map((tab, index) => (
           <SutraTabBtn
             title={tab.title}
             id={tab.id}
@@ -159,7 +159,7 @@ const ogTitle = `${sutra.data.title} | Lankavatara sutra | Lankavatara sutra`;
           <div class="grid w-full grid-cols-1 gap-x-16 md:grid-cols-2">
             <div class="max-w-md space-y-6">
               {
-                sutra.data.specificationsLeft.map((spec) => (
+                entry.data.specificationsLeft.map((spec) => (
                   <div>
                     <h3 class="block font-bold text-neutral-800 dark:text-neutral-200">
                       {spec.title}
@@ -172,7 +172,7 @@ const ogTitle = `${sutra.data.title} | Lankavatara sutra | Lankavatara sutra`;
               }
             </div>
             {
-              sutra.data.specificationsRight ? (
+              entry.data.specificationsRight ? (
                 <div class="mt-6 max-w-md space-y-6 md:mt-0 md:ml-auto">
                   {sutra.data.specificationsRight?.map((spec) => (
                     <div>
@@ -194,7 +194,7 @@ const ogTitle = `${sutra.data.title} | Lankavatara sutra | Lankavatara sutra`;
                           <table class="min-w-full divide-y divide-neutral-300 dark:divide-neutral-700">
                             <thead>
                               <tr>
-                                {sutra.data.tableData?.[0].feature?.map(
+                                {entry.data.tableData?.[0].feature?.map(
                                   (header) => (
                                     <th
                                       scope="col"
@@ -207,7 +207,7 @@ const ogTitle = `${sutra.data.title} | Lankavatara sutra | Lankavatara sutra`;
                               </tr>
                             </thead>
                             <tbody class="divide-y divide-neutral-300 dark:divide-neutral-700">
-                              {sutra.data.tableData?.map((row) =>
+                              {entry.data.tableData?.map((row) =>
                                 // Wrap each row's content in a separate <tr> element
                                 row.description.map((rowData) => (
                                   <tr>
@@ -242,9 +242,9 @@ const ogTitle = `${sutra.data.title} | Lankavatara sutra | Lankavatara sutra`;
         class="relative top-12 left-12 z-10 overflow-hidden rounded-xl shadow-lg md:top-16 md:left-12 md:-ml-12 lg:ml-0"
       >
         {
-          sutra.data.blueprints.first && (
+          entry.data.blueprints.first && (
             <Image
-              src={sutra.data.blueprints.first}
+              src={entry.data.blueprints.first}
               class="h-full w-full object-cover object-center"
               alt="Blueprint Illustration"
               format={"avif"}
@@ -266,6 +266,47 @@ const ogTitle = `${sutra.data.title} | Lankavatara sutra | Lankavatara sutra`;
         }
       </div>
     </div>
+  </div>
+
+  <!-- Media Players -->
+  <div class="mb-8 space-y-6">
+    {
+      entry.data.videoUrl && (
+        <div>
+          <h3 class="text-xl font-bold mb-4" title="Watch">
+            <LogoYoutube className="h-6 w-6" />
+          </h3>
+          <div
+            class="
+              aspect-w-16
+              aspect-h-9
+              rounded-lg
+              overflow-hidden
+            "
+          >
+            <iframe
+              src={entry.data.videoUrl}
+              title={entry.data.title}
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+              class="w-full h-full"
+            ></iframe>
+          </div>
+        </div>
+      )
+    }
+
+    {
+      entry.data.audioUrl && (
+        <div>
+          <h3 class="text-xl font-bold mb-4" title="Listen">🎧</h3>
+          <audio controls class="w-full">
+            <source src={entry.data.audioUrl} type="audio/mpeg">
+            Your browser does not support the audio element.
+          </audio>
+        </div>
+      )
+    }
   </div>
 </MainLayout>
 
