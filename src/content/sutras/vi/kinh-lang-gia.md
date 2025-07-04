@@ -4,8 +4,8 @@ description: "Lankavatara sutra"
 main:
   id: 1
   content: Lankavatara sutra | Lankavatara sutra
-  imgCard: "@/images/sutras/zen-meditation-1200x733.jpg"
-  imgMain: "@/images/sutras/zen-meditation-1600x1000.jpg"
+  imgCard: "@/images/blueprint-1.avif"
+  imgMain: "@/images/blueprint-2.avif"
   imgAlt: "Lankavatara sutra"
   audioUrl: "http://tosuthien.info/audio_storage/htduyluc/kinhlanggia/kinh%20lang%20gia%201.mp3"
   videoUrl: "https://www.youtube.com/embed/vwOi8UCTCp0"
@@ -49,8 +49,8 @@ tableData:
       - ["Finition", "Assortie"]
       - ["Contenu du Pack", "Diverses vis dans un ensemble"]
 blueprints:
-  first: "@/images/sutras/zen-meditation-1200x765.jpg"
-  second: "@/images/sutras/zen-meditation-1200x733.jpg"
+  first: "@/images/blueprint-1.avif"
+  second: "@/images/blueprint-2.avif"
 ---
 
 ## LỜI DỊCH GIẢ
