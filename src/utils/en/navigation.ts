@@ -3,7 +3,6 @@ const navBarLinks = [
   { name: "Accueil", url: "/en" },
   { name: "Sutras", url: "/en/sutras" },
   { name: "Services", url: "/en/services" },
-  { name: "Blog", url: "/en/blog" },
   { name: "Contact", url: "/en/contact" },
 ];
 
@@ -14,12 +13,6 @@ const footerLinks = [
       { name: "Documentation", url: "/en/welcome-to-docs/" },
       { name: "Outils et Équipements", url: "/en/sutras" },
       { name: "Services de Construction", url: "/en/services" },
-    ],
-  },
-  {
-    section: "Société",
-    links: [
-      { name: "Blog", url: "/en/blog" },
     ],
   },
 ];
