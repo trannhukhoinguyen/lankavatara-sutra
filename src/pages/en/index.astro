@@ -26,73 +26,84 @@ const avatarSrcs: Array<string> = [
   "https://images.unsplash.com/photo-1541101767792-f9b2b1c4f127?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&&auto=format&fit=facearea&facepad=3&w=300&h=300&q=80",
   "https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80",
 ];
+const title = "Lankavatara sutra";
+const subTitle = "Lankavatara sutra";
+const alt = "Lankavatara sutra";
+const content = "Lankavatara sutra";
+const heading = "Lankavatara sutra";
+const author = "Lankavatara sutra";
+const role = "Lankavatara sutra";
+const content = "Lankavatara sutra";
+const description = "Lankavatara sutra";
+const url = "https://lankavatara-sutra.vercel.app";
+const btnTitle = "Lankavatara sutra";
+const primaryBtn = "Lankavatara sutra";
+const primaryBtnURL = "Lankavatara sutra";
+const secondaryBtn = "Lankavatara sutra";
 ---
 
 <MainLayout lang="en">
   <AnnouncementBanner
     btnId="dismiss-button"
-    btnTitle="Découvrez ScrewFast sur GitHub"
-    url="https://github.com/mearashadowfax/ScrewFast"
+    btnTitle={btnTitle}
+    url={url}
   />
 
   <HeroSection
-    title=`Équipez vos projets avec <span class="text-yellow-500 dark:text-yellow-400">ScrewFast</span>`
-    subTitle="Outils matériels de haute qualité et services de construction experts pour tous les besoins en projet."
-    primaryBtn="Commencez à explorer"
+    title=`<span class="text-yellow-500 dark:text-yellow-400">{title}</span>`
+    subTitle={subTitle}
+    primaryBtn={primaryBtn}
     primaryBtnURL={getRelativeLocaleUrl("en", "sutras")}
-    secondaryBtn="Contacter l'équipe commerciale"
+    secondaryBtn={secondaryBtn}
     secondaryBtnURL={getRelativeLocaleUrl("en", "contact")}
     withReview={true}
     avatars={avatarSrcs}
-    rating=`<span class="font-bold">4.8</span> / 5`
+    rating=`<span class="font-bold">9.9</span> / 10`
     starCount={4}
-    reviews=`À partir de plus de <span class="font-bold">12,8k</span> avis`
+    reviews=`<span class="font-bold">12,8k</span> avis`
     src={heroImage}
-    alt="Pile de boîtes de produits ScrewFast contenant des outils matériels assortis"
+    alt={alt}
   />
 
   <ClientsSection
-    title="Faites confiance aux leaders de l'industrie"
-    subTitle="Découvrez la fiabilité choisie par les géants de l'industrie."
+    title={title}
+    subTitle={subTitle}
     partners={partnersData}
   />
 
   <FeaturesGeneral
-    title="Répondre aux exigences de l'industrie"
-    subTitle="Chez ScrewFast, nous relevons les défis uniques rencontrés dans les secteurs du matériel et de la construction. Des outils de pointe aux services experts, nous sommes déterminés à vous aider à surmonter les obstacles et à atteindre vos objectifs."
+    title={title}
+    subTitle={subTitle}
     src={featureImage}
-    alt="Produits ScrewFast dans des boîtes flottantes"
+    alt={alt}
     features={features}
   />
 
   <FeaturesNavs
-    title=`Personnalisez les offres de <span class="text-yellow-500 dark:text-yellow-400">ScrewFast</span> pour répondre parfaitement à vos besoins en matériel et en construction.`
+    title=`<span class="text-yellow-500 dark:text-yellow-400">{title}</span>`
     tabs={[
       {
-        heading: "Outils de pointe",
-        content:
-          "Optimisez vos projets avec les outils de pointe de ScrewFast. Faites l'expérience d'une efficacité accrue dans la gestion de la construction avec nos solutions automatisées sophistiquées.",
+        heading: heading,
+        content: content,
         svg: "tools",
         src: tools,
-        alt: "Équipement lourd jaune et noir sur un champ d'herbe brune",
+        alt: alt,
         first: true,
       },
       {
         heading: "Tableaux de bord intuitifs",
-        content:
-          "Naviguez facilement avec les tableaux de bord intuitifs de ScrewFast. Configurez et supervisez vos projets de manière transparente, avec des interfaces conviviales conçues pour une gestion efficace des flux de travail rapide et efficace.",
+        content: content,
         svg: "dashboard",
         src: dashboard,
-        alt: "Capture d'écran ou représentation graphique du tableau de bord intuitif",
+        alt: alt,
         second: true,
       },
       {
         heading: "Fonctionnalités robustes",
-        content:
-          "Minimisez la complexité, maximisez la sutraivité. Les fonctionnalités robustes de ScrewFast sont conçues pour rationaliser votre processus de construction, offrant des résultats qui se distinguent par leur excellence.",
+        content: content,
         svg: "house",
         src: construction,
-        alt: "Structure métallique grise d'un bâtiment près d'une grue à tour pendant la journée",
+        alt: alt,
       },
     ]}
   />

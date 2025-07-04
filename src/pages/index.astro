@@ -34,26 +34,27 @@ const author = "Lankavatara sutra";
 const role = "Lankavatara sutra";
 const description = "Lankavatara sutra";
 const url = "https://lankavatara-sutra.vercel.app";
-const avatarSrc = "/src/images/sutras/kinh-lang-gia.jpg";
+const btnTitle = "Lankavatara sutra";
+const primaryBtn = "Start Lankavatara sutra";
 ---
 
 <MainLayout>
   <AnnouncementBanner
     btnId="dismiss-button"
-    btnTitle="Lankavatara sutra"
+    btnTitle={btnTitle}
     url={url}
   />
 
   <HeroSection
-    title=`<span class="text-yellow-500 dark:text-yellow-400">Lankavatara sutra</span>`
-    subTitle="Lankavatara sutra"
-    primaryBtn="Start Lankavatara sutra"
+    title=`<span class="text-yellow-500 dark:text-yellow-400">{title}</span>`
+    subTitle={subTitle}
+    primaryBtn={primaryBtn}
     primaryBtnURL="/sutras"
     secondaryBtn="Contact"
     secondaryBtnURL="/contact"
     withReview={true}
     avatars={avatarSrcs}
-    rating=`<span class="font-bold">4.8</span> / 5`
+    rating=`<span class="font-bold">9.9</span> / 10`
     starCount={4}
     reviews=`<span class="font-bold">99k</span> Reviews`
     src={heroImage}
