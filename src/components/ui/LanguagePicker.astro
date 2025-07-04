@@ -44,9 +44,9 @@ import Icon from "./icons/Icon.astro";
 
 <script>
   // Type alias for supported languages
-  type TLanguage = "en" | "en";
+  type TLanguage = "vi" | "en";
   // array of supported languages
-  const languages: TLanguage[] = ["en", "en"];
+  const languages: TLanguage[] = ["vi", "en"];
 
   document.addEventListener("DOMContentLoaded", function () {
     // Only target language picker links
@@ -70,7 +70,7 @@ import Icon from "./icons/Icon.astro";
           .join("/");
 
         let newPath = "";
-        if (lang && lang !== "en") {
+        if (lang && lang !== "vi") {
           newPath = `/${lang}/${currentPath}`;
         } else {
           newPath = `/${currentPath}`;
