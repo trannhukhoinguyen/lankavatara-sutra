@@ -4,8 +4,8 @@ description: "Ensemble de Vis Assorties"
 main:
   id: 2
   content: Kinh Lăng Già | Kinh Lăng Già
-  imgCard: "/src/images/sutras/zen-mediation-1200x733.jpg"
-  imgMain: "/src/images/sutras/zen-mediation-1600x1000.jpg"
+  imgCard: "@/images/sutras/zen-meditation-1200x733.jpg"
+  imgMain: "@/images/sutras/zen-meditation-1600x1000.jpg"
   imgAlt: "Kinh Lăng Già"
 tabs:
   - id: "tabs-with-card-item-1"
@@ -47,6 +47,6 @@ tableData:
       - ["Finition", "Assortie"]
       - ["Contenu du Pack", "Diverses vis dans un ensemble"]
 blueprints:
-  first: "@/images/blueprint-1.avif"
-  second: "@/images/blueprint-2.avif"
+  first: "@/images/sutras/zen-meditation-1200x765.jpg"
+  second: "@/images/sutras/zen-meditation-1200x733.jpg"
 ---

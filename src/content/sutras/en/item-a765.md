@@ -49,6 +49,6 @@ tableData:
       - ["Finish", "Assorted"]
       - ["Package Contents", "Various screws in a set"]
 blueprints:
-  first: "@/images/blueprint-1.avif"
-  second: "@/images/blueprint-2.avif"
+  first: "@/images/sutras/zen-meditation-1200x765.jpg"
+  second: "@/images/sutras/zen-meditation-1200x733.jpg"
 ---
