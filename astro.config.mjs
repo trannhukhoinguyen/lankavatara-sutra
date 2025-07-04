@@ -11,7 +11,7 @@ export default defineConfig({
   // https://docs.astro.build/en/guides/images/#authorizing-remote-images
   site: "https://screwfast.uk",
   image: {
-    domains: ["images.unsplash.com"],
+    domains: [],
   },
   // i18n: {
   //   defaultLocale: "vi",
@@ -88,14 +88,14 @@ export default defineConfig({
         tag: "meta",
         attrs: {
           property: "og:image",
-          content: "https://lankavatara-sutra.vercel.app" + "/social.webp",
+          content: "https://lankavatara-sutra.vercel.app",
         },
       },
       {
         tag: "meta",
         attrs: {
           property: "twitter:image",
-          content: "https://lankavatara-sutra.vercel.app" + "/social.webp",
+          content: "https://lankavatara-sutra.vercel.app",
         },
       },
     ],

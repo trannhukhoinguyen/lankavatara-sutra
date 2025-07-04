@@ -14,8 +14,8 @@ const sutrasCollection = defineCollection({
     main: z.object({
       id: z.number(),
       content: z.string(),
-      imgCard: image(),
-      imgMain: image(),
+      imgCard: image().optional(),
+      imgMain: image().optional(),
       imgAlt: z.string(),
     }),
     tabs: z.array(
