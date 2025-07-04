@@ -6,7 +6,6 @@ import HeroSectionAlt from "@components/sections/landing/HeroSectionAlt.astro";
 import ClientsSection from "@components/sections/landing/ClientsSection.astro";
 import FeaturesGeneral from "@components/sections/features/FeaturesGeneral.astro";
 import FeaturesNavs from "@components/sections/features/FeaturesNavs.astro";
-import TestimonialsSection from "@components/sections/testimonials/TestimonialsSection.astro";
 import PricingSection from "@components/sections/pricing/PricingSection.astro";
 import FAQ from "@components/sections/misc/FAQ.astro";
 import AnnouncementBanner from "@components/ui/banners/AnnouncementBanner.astro";
@@ -35,7 +34,7 @@ const author = "Lankavatara sutra";
 const role = "Lankavatara sutra";
 const description = "Lankavatara sutra";
 const url = "https://lankavatara-sutra.vercel.app";
-const avatarSrc = "@/images/sutras/kinh-lang-gia.jpg";
+const avatarSrc = "/src/images/sutras/kinh-lang-gia.jpg";
 ---
 
 <MainLayout>
@@ -100,38 +99,6 @@ const avatarSrc = "@/images/sutras/kinh-lang-gia.jpg";
         svg: "house",
         src: construction,
         alt: alt,
-      },
-    ]}
-  />
-
-  <TestimonialsSection
-    title={title}
-    subTitle={subTitle}
-    ;
-    testimonials={[
-      {
-        content: content,
-        author: author,
-        role: role,
-        avatarSrc: avatarSrc,
-      },
-    ]}
-    statistics={[
-      {
-        count: "99+",
-        description: description,
-      },
-      {
-        count: "99%",
-        description:description,
-      },
-      {
-        count: "99%",
-        description: description,
-      },
-      {
-        count: "99x",
-        description: description,
       },
     ]}
   />
