@@ -4,11 +4,13 @@ import { z, defineCollection } from 'astro:content';
 import { docsSchema } from '@astrojs/starlight/schema';
 import { glob } from 'astro/loaders';
 
-const productsCollection = defineCollection({
-  loader: glob({ pattern: '**/[^_]*.{md,mdx}', base: "./src/content/products" }),
+const sutrasCollection = defineCollection({
+  loader: glob({ pattern: '**/[^_]*.{md,mdx}', base: "./src/content/sutras" }),
     schema: ({ image }) => z.object({
     title: z.string(),
     description: z.string(),
+    audioUrl: z.string().url().optional(),
+    videoUrl: z.string().url().optional(),
     main: z.object({
       id: z.number(),
       content: z.string(),
@@ -91,7 +93,7 @@ const insightsCollection = defineCollection({
 
 export const collections = {
   docs: defineCollection({ schema: docsSchema() }),
-  'products': productsCollection,
+  'sutras': sutrasCollection,
   'blog': blogCollection,
   'insights': insightsCollection,
 };

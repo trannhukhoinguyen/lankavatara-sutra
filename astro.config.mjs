@@ -14,10 +14,10 @@ export default defineConfig({
     domains: ["images.unsplash.com"],
   },
   // i18n: {
-  //   defaultLocale: "en",
-  //   locales: ["en", "fr"],
+  //   defaultLocale: "vi",
+  //   locales: ["en", "vi"],
   //   fallback: {
-  //     fr: "en",
+  //     en: "vi",
   //   },
   //   routing: {
   //     prefixDefaultLocale: false,
@@ -26,10 +26,9 @@ export default defineConfig({
   prefetch: true,
   integrations: [sitemap({
     i18n: {
-      defaultLocale: "en", // All urls that don't contain `fr` after `https://screwfast.uk/` will be treated as default locale, i.e. `en`
+      defaultLocale: "vi",
       locales: {
         en: "en", // The `defaultLocale` value must present in `locales` keys
-        fr: "fr",
       },
     },
   }), starlight({
@@ -42,27 +41,17 @@ export default defineConfig({
     // If both an Astro and Starlight i18n configurations are provided, an error is thrown.
     locales: {
       root: {
-        label: "English",
-        lang: "en",
+        label: "Tiếng Việt",
+        lang: "vi",
       },
-      de: { label: "Deutsch", lang: "de" },
-      es: { label: "Español", lang: "es" },
-      fa: { label: "Persian", lang: "fa", dir: "rtl" },
-      fr: { label: "Français", lang: "fr" },
-      ja: { label: "日本語", lang: "ja" },
-      "zh-cn": { label: "简体中文", lang: "zh-CN" },
+      en: { label: "English", lang: "en" },
     },
     // https://starlight.astro.build/guides/sidebar/
     sidebar: [
       {
         label: "Quick Start Guides",
         translations: {
-          de: "Schnellstartanleitungen",
-          es: "Guías de Inicio Rápido",
-          fa: "راهنمای شروع سریع",
-          fr: "Guides de Démarrage Rapide",
-          ja: "クイックスタートガイド",
-          "zh-cn": "快速入门指南",
+          en: "Quick Start Guides",
         },
         autogenerate: { directory: "guides" },
       },
@@ -83,7 +72,7 @@ export default defineConfig({
       },
     ],
     social: [
-      { icon: "github", label: "GitHub", href: "https://github.com/mearashadowfax/ScrewFast" },
+      { icon: "youtube", label: "Youtube", href: "https://www.youtube.com/T%C3%B4ngPhongT%E1%BB%95S%C6%B0Thi%E1%BB%81n" },
     ],
     disable404Route: true,
     customCss: ["./src/assets/styles/starlight.css"],
@@ -99,14 +88,14 @@ export default defineConfig({
         tag: "meta",
         attrs: {
           property: "og:image",
-          content: "https://screwfast.uk" + "/social.webp",
+          content: "https://lankavatara-sutra.vercel.app" + "/social.webp",
         },
       },
       {
         tag: "meta",
         attrs: {
           property: "twitter:image",
-          content: "https://screwfast.uk" + "/social.webp",
+          content: "https://lankavatara-sutra.vercel.app" + "/social.webp",
         },
       },
     ],
@@ -120,4 +109,10 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss()],
   },
+/*  markdown: {
+    shikiConfig: {
+      theme: 'github-light',
+      wrap: true
+    }
+  }*/
 });

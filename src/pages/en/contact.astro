@@ -1,0 +1,35 @@
+---
+// Import the necessary components
+import MainLayout from "@/layouts/MainLayout.astro";
+import ContactSection from "@components/sections/en/ContactSection_fr.astro";
+import { SITE } from "@data/constants";
+
+const pageTitle: string = `Nous Contacter | ${SITE.title}`;
+const metaDescription =
+  "Lankavatara sutra";
+const ogTitle = "Nous Contacter | ScrewFast";
+---
+
+<MainLayout
+  title={pageTitle}
+  lang="en"
+  customDescription={metaDescription}
+  customOgTitle={ogTitle}
+  structuredData={{
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://lankavatara-sutra.vercel.app/en/blog",
+    url: "https://lankavatara-sutra.vercel.app/en/blog",
+    name: "Blog | Lankavatara sutra",
+    description: "Lankavatara sutra",
+    isPartOf: {
+      "@type": "WebSite",
+      url: "https://lankavatara-sutra.vercel.app/en",
+      name: "Lankavatara sutra",
+      description: "Lankavatara sutra",
+    },
+    inLanguage: "en",
+  }}
+>
+  <ContactSection />
+</MainLayout>

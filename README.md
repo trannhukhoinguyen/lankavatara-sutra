@@ -532,9 +532,9 @@ Structured data in JSON-LD format can be managed by the `Meta.astro` component, 
   structuredData={{
     "@context": "https://schema.org",
     "@type": "WebSite",
-    "name": "ScrewFast",
-    "url": "https://screwfast.uk",
-    "description": "Discover top-quality hardware tools and services"
+    "name": "Lankavatara sutra",
+    "url": "https://lankavatara-sutra.vercel.app",
+    "description": "Lankavatara sutra"
   }}
 >
 ```

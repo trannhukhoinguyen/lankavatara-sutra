@@ -28,9 +28,9 @@ const footerLinks = [
 ];
 // An object of links for social icons
 const socialLinks = {
-  facebook: "https://www.facebook.com/",
+  facebook: "https://www.facebook.com/Nhohoivanhin",
   x: "https://twitter.com/",
-  github: "https://github.com/mearashadowfax/ScrewFast",
+  youtube: "https://youtube.com/T%C3%B4ngPhongT%E1%BB%95S%C6%B0Thi%E1%BB%81n",
   google: "https://www.google.com/",
   slack: "https://slack.com/",
 };

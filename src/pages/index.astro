@@ -26,122 +26,123 @@ const avatarSrcs: Array<string> = [
   "https://images.unsplash.com/photo-1541101767792-f9b2b1c4f127?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&&auto=format&fit=facearea&facepad=3&w=300&h=300&q=80",
   "https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80",
 ];
+const title = "Lankavatara sutra";
+const subTitle = "Lankavatara sutra";
+const alt = "Lankavatara sutra";
+const content = "Lankavatara sutra";
+const heading = "Lankavatara sutra";
+const author = "Lankavatara sutra";
+const role = "Lankavatara sutra";
+const description = "Lankavatara sutra";
+const url = "https://lankavatara-sutra.vercel.app";
+const avatarSrc = "/images/lankavatara-sutra.jpg";
 ---
 
 <MainLayout>
   <AnnouncementBanner
     btnId="dismiss-button"
     btnTitle="Explore ScrewFast on GitHub"
-    url="https://github.com/mearashadowfax/ScrewFast"
+    url={url}
   />
 
   <HeroSection
-    title=`Equip Your Projects with <span
-        class="text-yellow-500 dark:text-yellow-400">ScrewFast</span>`
-    subTitle="Top-quality hardware tools and expert construction services for every project need."
+    title=`<span class="text-yellow-500 dark:text-yellow-400">Lankavatara sutra</span>`
+    subTitle="Lankavatara sutra"
     primaryBtn="Start Exploring"
     primaryBtnURL="/products"
-    secondaryBtn="Contact Sales Team"
+    secondaryBtn="Contact"
     secondaryBtnURL="/contact"
     withReview={true}
     avatars={avatarSrcs}
     rating=`<span class="font-bold">4.8</span> / 5`
     starCount={4}
-    reviews=`From Over <span class="font-bold">12.8k</span> Reviews`
+    reviews=`<span class="font-bold">99k</span> Reviews`
     src={heroImage}
-    alt="Stack of ScrewFast product boxes containing assorted hardware tools"
+    alt={alt}
   />
 
   <ClientsSection
-    title="Trusted by Industry Leaders"
-    subTitle="Experience the reliability chosen by industry giants."
+    title={title}
+    subTitle={subTitle}
     partners={partnersData}
   />
 
   <FeaturesGeneral
-    title="Meeting Industry Demands"
-    subTitle="At ScrewFast, we tackle the unique challenges encountered in the hardware and construction sectors. From cutting-edge tools to expert services, we're dedicated to helping you overcome obstacles and achieve your goals."
+    title={title}
+    subTitle={subTitle}
     src={featureImage}
-    alt="ScrewFast products in floating boxes"
+    alt={alt}
     features={features}
   />
 
   <FeaturesNavs
-    title=`Customize <span class="text-yellow-500 dark:text-yellow-400">ScrewFast</span>'s offerings to perfectly suit your hardware and construction needs.`
+    title=`<span class="text-yellow-500 dark:text-yellow-400">{title}</span>`
     tabs={[
       {
-        heading: "Cutting-Edge Tools",
-        content:
-          "Empower your projects with ScrewFast's cutting-edge tools. Experience enhanced efficiency in construction management with our sophisticated automated solutions.",
+        heading: heading,
+        content: content,
         svg: "tools",
         src: tools,
-        alt: "Yellow and black heavy equipment on brown grass field",
+        alt: alt,
         first: true,
       },
       {
-        heading: "Intuitive Dashboards",
-        content:
-          "Navigate with ease using ScrewFast's intuitive dashboards. Set up and oversee your projects seamlessly, with user-friendly interfaces designed for quick and effective workflow management.",
+        heading: heading,
+        content: content,
         svg: "dashboard",
         src: dashboard,
-        alt: "A screenshot or graphic representation of the intuitive dashboard",
+        alt: alt,
         second: true,
       },
       {
-        heading: "Robust Features",
-        content:
-          "Minimize complexity, maximize productivity. ScrewFast's robust features are engineered to streamline your construction process, delivering results that stand out for their excellence.",
+        heading: heading,
+        content: content,
         svg: "house",
         src: construction,
-        alt: "Gray metal building frame near tower crane during daytime",
+        alt: alt,
       },
     ]}
   />
 
   <TestimonialsSection
-    title="Fast-Track Your Projects"
-    subTitle="At ScrewFast, we ensure a swift start with instant account setup. Experience the speed of construction redefined."
+    title={title}
+    subTitle={subTitle}
     ;
     testimonials={[
       {
-        content:
-          "ScrewFast dramatically boosted our project efficiency. Setup was instant, and their rapid response times are phenomenal. Truly a game-changer in hardware and construction support!",
-        author: "Samantha Ruiz",
-        role: "Chief Operating Officer | ConstructIt Inc.",
-        avatarSrc:
-          "https://images.unsplash.com/photo-1593104547489-5cfb3839a3b5?q=80&w=1453&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D8&auto=format&fit=facearea&facepad=2&w=320&h=320&q=80",
+        content: content,
+        author: author,
+        role: role,
+        avatarSrc: avatarSrc,
       },
     ]}
     statistics={[
       {
         count: "70k+",
-        description:
-          "customers equipped — from DIY to major construction firms",
+        description: description,
       },
       {
         count: "35%",
-        description:
-          "uptick in project efficiency with ScrewFast tools and services",
+        description:description,
       },
       {
         count: "15.3%",
-        description:
-          "reduction in maintenance costs reported by long-term clients",
+        description: description,
       },
       {
         count: "2x",
-        description: "quicker assembly using innovative fastening solutions",
+        description: description,
       },
     ]}
   />
 
   <PricingSection pricing={pricing} />
 
-  <FAQ title="Frequently<br />asked questions" faqs={faqs} />
+  <FAQ title={title} faqs={faqs} />
 
   <HeroSectionAlt
-    title="Let's Build Together"
-    subTitle="ScrewFast is an open-source template, meticulously crafted with Astro, Tailwind CSS, and Preline UI frameworks."
-    url="https://github.com/mearashadowfax/ScrewFast"
+    title={title}
+    subTitle={subTitle}
+    url={url}
   />
 </MainLayout>
