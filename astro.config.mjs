@@ -109,10 +109,10 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss()],
   },
-/*  markdown: {
-    shikiConfig: {
-      theme: 'github-light',
-      wrap: true
-    }
-  }*/
+  /*  markdown: {
+      shikiConfig: {
+        theme: 'github-light',
+        wrap: true
+      }
+    }*/
 });
