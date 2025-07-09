@@ -17,7 +17,7 @@ import MediaArea from "../../components/MediaArea.astro";
 // Update getStaticPaths for English posts
 export async function getStaticPaths() {
   const blogPosts = await getCollection("blog", ({ id }) =>
-    id.startsWith("en/")
+    id.startsWith("vi/")
   );
   return blogPosts.map((post) => {
     const idWithoutLang = post.id.replace(/^en\//, ""); // Remove the "en/" prefix
