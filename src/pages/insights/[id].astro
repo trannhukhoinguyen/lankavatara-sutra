@@ -5,6 +5,7 @@ import LogoYoutube from "@components/LogoYoutube.astro";
 import MainLayout from "@/layouts/MainLayout.astro";
 import { Image } from "astro:assets";
 import { getCollection, render } from "astro:content";
+import MediaArea from "../../components/MediaArea.astro";
 
 // Use `getStaticPaths` to generate static routes for generated pages on build
 export async function getStaticPaths() {
@@ -108,45 +109,7 @@ const ogTitle = `${post.data.title} | Insights | ${SITE.title}`;
           </h1>
 
           <!-- Media Players -->
-          <div class="mb-8 space-y-6">
-            {
-              post?.data.videoUrl && (
-                <div>
-                  <h3 class="text-xl font-bold mb-4" title="Watch">
-                    <LogoYoutube className="h-6 w-6" />
-                  </h3>
-                  <div
-                    class="
-                      aspect-w-16
-                      aspect-h-9
-                      rounded-lg
-                      overflow-hidden
-                    "
-                  >
-                    <iframe
-                      src={post?.data.videoUrl}
-                      title={post?.data.title}
-                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                      allowfullscreen
-                      class="w-full h-full"
-                    ></iframe>
-                  </div>
-                </div>
-              )
-            }
-
-            {
-              post?.data.audioUrl && (
-                <div>
-                  <h3 class="text-xl font-bold mb-4" title="Listen">🎧</h3>
-                  <audio controls class="w-full">
-                    <source src={post.data.audioUrl} type="audio/mpeg">
-                    Your browser does not support the audio element.
-                  </audio>
-                </div>
-              )
-            }
-          </div>
+          <MediaArea post={post}></MediaArea>
 
           <article
             class="text-lg text-pretty text-neutral-700 dark:text-neutral-300"

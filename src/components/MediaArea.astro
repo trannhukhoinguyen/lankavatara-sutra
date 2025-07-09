@@ -1,0 +1,48 @@
+---
+import LogoYoutube from "../components/LogoYoutube.astro";
+
+const { post } = Astro.props;
+---
+
+<!-- Media Players -->
+<div class="mb-8 space-y-6">
+	{
+    post.data?.videoUrls?.length && (post.data?.videoUrls?.map((url, index) => <div>
+        <h4 class="text-xl font-bold mb-4" title={url}><LogoYoutube className="h-6 w-6" /> {index + 1}</h4>
+        <div>
+          <div
+            class="
+                aspect-w-16
+                aspect-h-9
+                rounded-lg
+                overflow-hidden
+              "
+          >
+            <iframe
+              src={post?.data.videoUrl}
+              title={post?.data.title}
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+              class="w-full h-full"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    ))
+	}
+
+	{
+    post.data?.audioUrls?.length && (post.data?.audioUrls?.map((url, index) => <div>
+        <h4 class="text-xl font-bold mb-4" title={url}>🎧 {index + 1}</h4>
+        <audio controls class="w-full">
+          <source src={url} type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+    ))
+	}
+</div>
+
+<style>
+</style>
+

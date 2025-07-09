@@ -12,6 +12,7 @@ import { capitalize, formatDate } from "@utils/utils";
 import { getCollection } from "astro:content";
 import type { CollectionEntry } from "astro:content";
 import { SITE } from "@data/constants";
+import MediaArea from "../../components/MediaArea.astro";
 
 // Update getStaticPaths for English posts
 export async function getStaticPaths() {
@@ -46,7 +47,7 @@ const relatedPosts: CollectionEntry<"blog">[] = blogPosts.filter(
 const pageTitle: string = `${post.data.title} | ${SITE.title}`;
 // For the meta description, use the first paragraph of content if available
 const metaDescription =
-  post.data.contents[0] || `Read ${post.data.title} on ScrewFast's blog`;
+  post.data.contents[0] || `Read ${post.data.title} on Sudden Enlightenment's blog`;
 const ogTitle = `${post.data.title} | Blog | ${SITE.title}`;
 ---
 
@@ -69,12 +70,12 @@ const ogTitle = `${post.data.title} | Blog | ${SITE.title}`;
       name: SITE.title,
       logo: {
         "@type": "ImageObject",
-        url: "https://screwfast.uk/favicon.ico",
+        url: "https://sudden-enlightenment.vercel.app/favicon.ico",
       },
     },
     mainEntityOfPage: {
       "@type": "WebPage",
-      "@id": `https://screwfast.uk/blog/${post.id.replace(/^en\//, "")}`,
+      "@id": `https://sudden-enlightenment.vercel.app/blog/${post.id.replace(/^en\//, "")}`,
     },
   }}
 >
@@ -115,45 +116,7 @@ const ogTitle = `${post.data.title} | Blog | ${SITE.title}`;
       </h2>
 
       <!-- Media Players -->
-      <div class="mb-8 space-y-6">
-        {
-          post?.data.videoUrl && (
-            <div>
-              <h3 class="text-xl font-bold mb-4" title="Watch">
-                <LogoYoutube className="h-6 w-6" />
-              </h3>
-              <div
-                class="
-              aspect-w-16
-              aspect-h-9
-              rounded-lg
-              overflow-hidden
-            "
-              >
-                <iframe
-                  src={post?.data.videoUrl}
-                  title={post?.data.title}
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowfullscreen
-                  class="w-full h-full"
-                ></iframe>
-              </div>
-            </div>
-          )
-        }
-
-        {
-          post?.data.audioUrl && (
-            <div>
-              <h3 class="text-xl font-bold mb-4" title="Listen">🎧</h3>
-              <audio controls class="w-full">
-                <source src={post.data.audioUrl} type="audio/mpeg">
-                Your browser does not support the audio element.
-              </audio>
-            </div>
-          )
-        }
-      </div>
+      <MediaArea post={post}></MediaArea>
 
       {/* Blog post contents */}
       <div class="mb-5 space-y-5 md:mb-8 md:space-y-8">

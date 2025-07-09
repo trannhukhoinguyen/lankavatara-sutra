@@ -2,7 +2,7 @@
 const navBarLinks = [
   { name: "Trang chủ", url: "/" },
   { name: "Kinh", url: "/sutras" },
-  { name: "TOC Insights", url: "/insights" },
+  { name: "Giáo pháp", url: "/insights" },
   { name: "Blog", url: "/blog" },
   { name: "Dịch vụ", url: "/services" },
 ];
@@ -11,9 +11,9 @@ const footerLinks = [
   {
     section: "Ecosystem",
     links: [
-      { name: "Documentation", url: "/welcome-to-docs/" },
+      { name: "Bài hướng dẫn", url: "/welcome-to-docs/" },
       { name: "Kinh Lăng Già", url: "/sutras" },
-      { name: "Construction Services", url: "/services" },
+      { name: "Dịch vụ", url: "/services" },
     ],
   },
 ];

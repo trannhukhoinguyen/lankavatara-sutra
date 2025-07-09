@@ -3,44 +3,30 @@
 import MainLayout from "@/layouts/MainLayout.astro";
 import CardBlog from "@components/ui/cards/CardBlog.astro";
 import CardBlogRecent from "@components/ui/cards/CardBlogRecent.astro";
-import CardInsight from "@components/ui/cards/CardInsight.astro";
 import { getCollection } from "astro:content";
 import type { CollectionEntry } from "astro:content";
 import { SITE } from "@data/constants";
 
 // Get all blogs post in English and sort them based on publish date
-
 const englishBlogEntries = await getCollection("blog", ({ id }) => {
   return id.startsWith("en/");
 });
-
-const englishInsightsEntries = await getCollection("insights", ({ id }) => {
-  return id.startsWith("en/");
-});
-
 const blogPosts: CollectionEntry<"blog">[] = englishBlogEntries.sort(
   (a: CollectionEntry<"blog">, b: CollectionEntry<"blog">) =>
     b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
 );
-// Get all insights posts
-const insightPosts: CollectionEntry<"insights">[] = englishInsightsEntries;
 
 // Separate the most recent post from others
 const mostRecentPost: CollectionEntry<"blog"> = blogPosts[0];
 const otherPosts: CollectionEntry<"blog">[] = blogPosts.slice(1);
 
 // Define variables for page content
-const title: string = "Your Gateway to Construction Excellence";
-const subTitle: string =
-  "Explore the latest news, tips, and insights from ScrewFast to enhance your construction projects. From product spotlights to project management strategies, our blog is your go-to resource for all things hardware and construction.";
-const secondTitle: string = "Insights";
-const secondSubTitle: string =
-  "Stay up-to-date with the latest trends and developments in the construction industry with insights from ScrewFast's team of industry experts. ";
-
+const title: string = "Vietnamese";
+const subTitle: string = "";
 const pageTitle: string = `Blog | ${SITE.title}`;
 const metaDescription =
-  "Stay up-to-date with the latest trends and developments in the construction industry with insights from ScrewFast's team of industry experts.";
-const ogTitle = "Construction Industry Blog | ScrewFast";
+  "Stay up-to-date with the latest trends and developments in the construction industry with insights from Sudden Enlightenment's team of industry experts.";
+const ogTitle = "Construction Industry Blog | Sudden Enlightenment";
 ---
 
 <MainLayout
@@ -50,17 +36,17 @@ const ogTitle = "Construction Industry Blog | ScrewFast";
   structuredData={{
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "@id": "https://screwfast.uk/blog",
-    url: "https://screwfast.uk/blog",
-    name: "Blog | ScrewFast",
+    "@id": "https://sudden-enlightenment.vercel.app/blog",
+    url: "https://sudden-enlightenment.vercel.app/blog",
+    name: "Blog | Sudden Enlightenment",
     description:
-      "Stay up-to-date with the latest trends and developments in the construction industry with insights from ScrewFast's team of industry experts.",
+      "Stay up-to-date with the latest trends and developments in the construction industry with insights from Sudden Enlightenment's team of industry experts.",
     isPartOf: {
       "@type": "WebSite",
-      url: "https://screwfast.uk",
-      name: "ScrewFast",
+      url: "https://sudden-enlightenment.vercel.app",
+      name: "Sudden Enlightenment",
       description:
-        "ScrewFast offers top-tier hardware tools and expert construction services to meet all your project needs.",
+        "Sudden Enlightenment offers top-tier hardware tools and expert construction services to meet all your project needs.",
     },
     inLanguage: "en-US",
   }}
@@ -97,27 +83,5 @@ const ogTitle = "Construction Industry Blog | ScrewFast";
     class="mx-auto max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 2xl:max-w-full"
   >
     <CardBlogRecent blogEntry={mostRecentPost} />
-  </section>
-  {/* Insights section */}
-  <section
-    class="mx-auto max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 2xl:max-w-full"
-  >
-    <div class="mx-auto mb-10 max-w-2xl text-center lg:mb-14">
-      <h2
-        class="text-2xl font-bold text-neutral-800 md:text-4xl md:leading-tight dark:text-neutral-200"
-      >
-        {secondTitle}
-      </h2>
-      <p class="mt-1 text-pretty text-neutral-600 dark:text-neutral-400">
-        {secondSubTitle}
-      </p>
-    </div>
-    <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-      {
-        insightPosts.map((insightEntry) => (
-          <CardInsight insightEntry={insightEntry} />
-        ))
-      }
-    </div>
   </section>
 </MainLayout>

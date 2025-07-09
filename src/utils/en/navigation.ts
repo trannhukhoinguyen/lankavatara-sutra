@@ -2,18 +2,18 @@
 const navBarLinks = [
   { name: "Home", url: "/en" },
   { name: "Sutras", url: "/en/sutras" },
-  { name: "TOC Insights", url: "/insights" },
-  { name: "Blog", url: "/blog" },
+  { name: "TOC Insights", url: "/en/insights" },
+  { name: "Blog", url: "/en/blog" },
   { name: "Services", url: "/en/services" },
 ];
 
 const footerLinks = [
   {
-    section: "Écosystème",
+    section: "Système",
     links: [
       { name: "Documentation", url: "/en/welcome-to-docs/" },
-      { name: "Outils et Équipements", url: "/en/sutras" },
-      { name: "Services de Construction", url: "/en/services" },
+      { name: "Sutras", url: "/en/sutras" },
+      { name: "Services", url: "/en/services" },
     ],
   },
 ];

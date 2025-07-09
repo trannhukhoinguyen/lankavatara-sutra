@@ -1,14 +1,20 @@
 ---
 title: "Kinh Lăng Già 1"
 description: "Sudden enlightenment"
+audioUrls: [
+  "http://tosuthien.info/audio_storage/htduyluc/kinhlanggia/kinh%20lang%20gia%201.mp3"
+]
+videoUrls: [
+  "https://www.youtube.com/embed/v4a6yGQvYwo"
+]
 main:
   id: 1
   content: Sudden enlightenment | Sudden enlightenment
   imgCard: "@/images/blueprint-1.avif"
   imgMain: "@/images/blueprint-2.avif"
   imgAlt: "Sudden enlightenment"
-  audioUrl: "http://tosuthien.info/audio_storage/htduyluc/kinhlanggia/kinh%20lang%20gia%201.mp3"
-  videoUrl: "https://www.youtube.com/embed/vwOi8UCTCp0"
+  audioUrls: "http://tosuthien.info/audio_storage/htduyluc/kinhlanggia/kinh%20lang%20gia%201.mp3"
+  videoUrls: "https://www.youtube.com/embed/vwOi8UCTCp0"
 tabs:
   - id: "tabs-with-card-item-1"
     dataTab: "#tabs-with-card-1"

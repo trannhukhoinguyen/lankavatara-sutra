@@ -7,6 +7,7 @@ import { Image } from "astro:assets";
 import { getCollection } from "astro:content";
 import { SITE } from "@data/constants";
 import LogoYoutube from "@components/LogoYoutube.astro";
+import MediaArea from "../../../components/MediaArea.astro";
 
 // Global declaration for gsap animation library
 declare global {
@@ -269,45 +270,7 @@ const ogTitle = `${entry.data.title} | Sudden enlightenment | Sudden enlightenme
   </div>
 
   <!-- Media Players -->
-  <div class="mb-8 space-y-6">
-    {
-      entry.data.videoUrl && (
-        <div>
-          <h3 class="text-xl font-bold mb-4" title="Watch">
-            <LogoYoutube className="h-6 w-6" />
-          </h3>
-          <div
-            class="
-              aspect-w-16
-              aspect-h-9
-              rounded-lg
-              overflow-hidden
-            "
-          >
-            <iframe
-              src={entry.data.videoUrl}
-              title={entry.data.title}
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
-              class="w-full h-full"
-            ></iframe>
-          </div>
-        </div>
-      )
-    }
-
-    {
-      entry.data.audioUrl && (
-        <div>
-          <h3 class="text-xl font-bold mb-4" title="Listen">🎧</h3>
-          <audio controls class="w-full">
-            <source src={entry.data.audioUrl} type="audio/mpeg">
-            Your browser does not support the audio element.
-          </audio>
-        </div>
-      )
-    }
-  </div>
+  <MediaArea post={entry}></MediaArea>
 </MainLayout>
 
 <script>

@@ -1,8 +1,14 @@
 ---
-title: "SF-AB A765"
-description: "Ensemble de Vis Assorties"
+title: "Vietnam 1"
+description: "Vietnam 1"
+audioUrls: [
+  "http://tosuthien.info/audio_storage/htduyluc/kinhlanggia/kinh%20lang%20gia%201.mp3"
+]
+videoUrls: [
+  "https://www.youtube.com/embed/v4a6yGQvYwo"
+]
 main:
-  id: 2
+  id: 1
   content: Kinh Lăng Già | Kinh Lăng Già
   imgCard: "@/images/blueprint-1.avif"
   imgMain: "@/images/blueprint-2.avif"

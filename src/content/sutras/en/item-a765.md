@@ -1,6 +1,12 @@
 ---
 title: "SF-AB A765"
-description: "Assorted Screw Set" 
+description: "Assorted Screw Set"
+audioUrls: [
+  "http://tosuthien.info/audio_storage/htduyluc/kinhlanggia/kinh%20lang%20gia%201.mp3"
+]
+videoUrls: [
+  "https://www.youtube.com/embed/v4a6yGQvYwo"
+]
 main:
   id: 2
   content: |
