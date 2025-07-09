@@ -4,7 +4,7 @@ description: ""
 audioUrl: "http://tosuthien.info/audio_storage/htduyluc/kinhlanggia/kinh%20lang%20gia%202.mp3"
 videoUrl: "https://www.youtube.com/embed/vLFrPjZORvg"
 cardImage: "@/images/insights/insight-2.avif"
-cardImageAlt: "Top view mechanical tools arrangement"
+cardImageAlt: ""
 ---
 
 In the realm of construction, where projects often involve intricate designs, tight deadlines, and complex logistical challenges, the importance of collaboration cannot be overstated. Effective collaboration is not just a desirable aspect of project management; it is the cornerstone upon which successful construction endeavors are built. In this long read, we delve into how collaboration serves as the driving force behind ScrewFast's construction approach, facilitating effective communication and teamwork to achieve outstanding outcomes.

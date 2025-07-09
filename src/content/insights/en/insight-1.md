@@ -4,7 +4,7 @@ description: ""
 audioUrl: "http://tosuthien.info/audio_storage/htduyluc/kinhlanggia/kinh%20lang%20gia%201.mp3"
 videoUrl: "https://www.youtube.com/embed/v4a6yGQvYwo"
 cardImage: "@/images/insights/insight-1.avif"
-cardImageAlt: "Top view mechanical tools arrangement"
+cardImageAlt: ""
 ---
 
 In the world of construction, where innovation meets practicality, ScrewFast stands as a beacon of pioneering advancements. For years, this company has been at the forefront of revolutionizing construction through its unwavering commitment to advanced technology and innovative solutions. From skyscrapers to bridges, ScrewFast has left an indelible mark on the industry, shaping the future of construction in ways once thought unimaginable.

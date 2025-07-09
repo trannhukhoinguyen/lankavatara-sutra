@@ -4,7 +4,7 @@ description: ""
 audioUrl: "http://tosuthien.info/audio_storage/htduyluc/kinhlanggia/kinh%20lang%20gia%203.mp3"
 videoUrl: "https://www.youtube.com/embed/b-ure2_SVN0"
 cardImage: "@/images/insights/insight-3.avif"
-cardImageAlt: "Top view mechanical tools arrangement"
+cardImageAlt: ""
 ---
 
 The construction industry casts a long shadow.  While it provides the essential framework for our lives, its environmental impact is undeniable. From resource depletion and pollution to energy consumption and waste generation, traditional construction practices take a toll on our planet. But a revolution is brewing, and at the forefront is ScrewFast, a company demonstrably changing the game with its commitment to sustainable practices.
