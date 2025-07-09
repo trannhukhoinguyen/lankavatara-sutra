@@ -1,9 +1,10 @@
 
 const navBarLinks = [
-  { name: "Accueil", url: "/en" },
+  { name: "Home", url: "/en" },
   { name: "Sutras", url: "/en/sutras" },
+  { name: "TOC Insights", url: "/insights" },
+  { name: "Blog", url: "/blog" },
   { name: "Services", url: "/en/services" },
-  { name: "Contact", url: "/en/contact" },
 ];
 
 const footerLinks = [

@@ -1,6 +1,8 @@
 ---
 title: "Simplifiez l'Approvisionnement et Restez dans les Limites du Budget avec ScrewFast"
-description: "Outils abordables et durables pour des projets de construction efficaces"
+description: ""
+audioUrl: "http://tosuthien.info/audio_storage/htduyluc/kinhlanggia/kinh%20lang%20gia%203.mp3"
+videoUrl: "https://www.youtube.com/embed/b-ure2_SVN0"
 author: "Olga Zabegina"
 role: "Directrice Marketing Stratégique"
 authorImage: "@/images/blog/anna.avif"

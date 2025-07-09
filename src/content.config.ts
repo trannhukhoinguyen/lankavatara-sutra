@@ -123,6 +123,8 @@ const blogCollection = defineCollection({
   schema: ({ image }) => z.object ({
   title: z.string(),
   description: z.string(),
+  audioUrl: z.string().url().optional(),
+  videoUrl: z.string().url().optional(),
   contents: z.array(z.string()),
   author: z.string(),
   role: z.string().optional(),
@@ -141,6 +143,8 @@ const insightsCollection = defineCollection({
   schema: ({ image }) => z.object ({
   title: z.string(),
   description: z.string(),
+  audioUrl: z.string().url().optional(),
+  videoUrl: z.string().url().optional(),
   // contents: z.array(z.string()),
   cardImage: image(),
   cardImageAlt: z.string(),

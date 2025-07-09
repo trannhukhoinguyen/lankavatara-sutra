@@ -1,7 +1,9 @@
 ---
 title: "Optimisation de l'efficacité avec les outils de pointe de ScrewFast"
-description: "Innovation de l'efficacité de la construction avec des outils de précision et un soutien."
+description: ""
 author: "Jacob"
+audioUrl: "http://tosuthien.info/audio_storage/htduyluc/kinhlanggia/kinh%20lang%20gia%201.mp3"
+videoUrl: "https://www.youtube.com/embed/v4a6yGQvYwo"
 authorImage: "@/images/blog/jacob.avif"
 authorImageAlt: "Avatar Description"
 pubDate: 2024-02-06

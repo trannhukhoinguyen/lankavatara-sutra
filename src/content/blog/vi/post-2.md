@@ -1,6 +1,8 @@
 ---
 title: "Améliorer la Sécurité et l'Artisanat avec les Services de Construction de ScrewFast"
-description: "Services de construction de qualité pour des résultats durables"
+description: ""
+audioUrl: "http://tosuthien.info/audio_storage/htduyluc/kinhlanggia/kinh%20lang%20gia%202.mp3"
+videoUrl: "https://www.youtube.com/embed/vLFrPjZORvg"
 author: "Brad"
 authorImage: "@/images/blog/brad.avif"
 authorImageAlt: "Avatar Description"

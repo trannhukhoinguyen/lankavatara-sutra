@@ -1,6 +1,8 @@
 ---
 title: "The Impact of Sustainable Practices"
-description: "Discover how ScrewFast is leading the charge in promoting sustainability within the construction industry"
+description: ""
+audioUrl: "http://tosuthien.info/audio_storage/htduyluc/kinhlanggia/kinh%20lang%20gia%203.mp3"
+videoUrl: "https://www.youtube.com/embed/b-ure2_SVN0"
 cardImage: "@/images/insights/insight-3.avif"
 cardImageAlt: "Top view mechanical tools arrangement"
 ---

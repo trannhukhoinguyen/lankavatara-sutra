@@ -1,8 +1,10 @@
 // An array of links for navigation bar
 const navBarLinks = [
-  { name: "Home", url: "/" },
-  { name: "Sutras", url: "/sutras" },
-  { name: "Services", url: "/services" },
+  { name: "Trang chủ", url: "/" },
+  { name: "Kinh", url: "/sutras" },
+  { name: "TOC Insights", url: "/insights" },
+  { name: "Blog", url: "/blog" },
+  { name: "Dịch vụ", url: "/services" },
 ];
 // An array of links for footer
 const footerLinks = [

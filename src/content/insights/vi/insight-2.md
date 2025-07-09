@@ -1,6 +1,8 @@
 ---
 title: "The Importance of Collaboration"
-description: "Explore how collaboration is central to ScrewFast's construction approach, driving effective communication and teamwork to achieve outstanding outcomes."
+description: ""
+audioUrl: "http://tosuthien.info/audio_storage/htduyluc/kinhlanggia/kinh%20lang%20gia%202.mp3"
+videoUrl: "https://www.youtube.com/embed/vLFrPjZORvg"
 cardImage: "@/images/insights/insight-2.avif"
 cardImageAlt: "Top view mechanical tools arrangement"
 ---
