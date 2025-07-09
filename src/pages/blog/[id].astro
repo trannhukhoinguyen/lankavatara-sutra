@@ -20,7 +20,7 @@ export async function getStaticPaths() {
     id.startsWith("vi/")
   );
   return blogPosts.map((post) => {
-    const idWithoutLang = post.id.replace(/^en\//, ""); // Remove the "en/" prefix
+    const idWithoutLang = post.id.replace(/^vi\//, ""); // Remove the "en/" prefix
     return {
       params: { id: idWithoutLang },
       props: { post },

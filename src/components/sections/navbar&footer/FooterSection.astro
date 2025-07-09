@@ -1,7 +1,6 @@
 ---
 // Import the necessary dependencies
 import FooterSocialLink from "@components/ui/links/FooterSocialLink.astro";
-import EmailFooterInput from "@components/ui/forms/input/EmailFooterInput.astro";
 import enStrings from "@utils/en/navigation.ts";
 import viStrings from "@utils/navigation.ts";
 import Icon from "@components/ui/icons/Icon.astro";
@@ -13,7 +12,6 @@ const strings = Astro.currentLocale === "vi" ? viStrings : enStrings;
 
 // Define the variables that will be used in this component
 const sectionThreeTitle: string = Astro.currentLocale === "vi" ? "vi" : "en";
-const sectionThreeContent: string = Astro.currentLocale === "vi" ? "vi" : "en";
 const crafted: string = Astro.currentLocale === "vi" ? "vi" : "en";
 ---
 
@@ -58,13 +56,6 @@ const crafted: string = Astro.currentLocale === "vi" ? "vi" : "en";
         <h3 class="font-bold text-neutral-800 dark:text-neutral-200">
           {sectionThreeTitle}
         </h3>
-
-        <form>
-          <EmailFooterInput />
-          <p class="mt-3 text-sm text-neutral-600 dark:text-neutral-400">
-            {sectionThreeContent}
-          </p>
-        </form>
       </div>
     </div>
 
