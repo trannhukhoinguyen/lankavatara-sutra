@@ -7,7 +7,7 @@ const { post } = Astro.props;
 <!-- Media Players -->
 <div class="mb-8 space-y-6">
 	{
-    post.data?.videoUrls?.length && (post.data?.videoUrls?.map((url, index) => <div>
+    post.data?.videoUrls?.length && (post.data?.videoUrls?.map((url: string, index: number) => <div>
         <h4 class="text-xl font-bold mb-4" title={url}><LogoYoutube className="h-6 w-6" /> {index + 1}</h4>
         <div>
           <div
@@ -18,12 +18,20 @@ const { post } = Astro.props;
                 overflow-hidden
               "
           >
-            <iframe
+<!--            <iframe
               src={post?.data.videoUrl}
               title={post?.data.title}
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen
               class="w-full h-full"
+            ></iframe>     -->
+            <iframe
+              src={post?.data.videoUrl}
+              title={post?.data.title}
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+              width="100%"
+              height="350"
             ></iframe>
           </div>
         </div>
@@ -32,7 +40,7 @@ const { post } = Astro.props;
 	}
 
 	{
-    post.data?.audioUrls?.length && (post.data?.audioUrls?.map((url, index) => <div>
+    post.data?.audioUrls?.length && (post.data?.audioUrls?.map((url: string, index: number) => <div>
         <h4 class="text-xl font-bold mb-4" title={url}>🎧 {index + 1}</h4>
         <audio controls class="w-full">
           <source src={url} type="audio/mpeg">
