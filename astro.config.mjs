@@ -9,7 +9,7 @@ import mdx from "@astrojs/mdx";
 // https://astro.build/config
 export default defineConfig({
   // https://docs.astro.build/en/guides/images/#authorizing-remote-images
-  site: "https://lankavatara-sutra.vercel.app",
+  site: "https://sudden-enlightenment.vercel.app",
   image: {
     domains: [],
   },
@@ -88,14 +88,14 @@ export default defineConfig({
         tag: "meta",
         attrs: {
           property: "og:image",
-          content: "https://lankavatara-sutra.vercel.app",
+          content: "https://sudden-enlightenment.vercel.app",
         },
       },
       {
         tag: "meta",
         attrs: {
           property: "twitter:image",
-          content: "https://lankavatara-sutra.vercel.app",
+          content: "https://sudden-enlightenment.vercel.app",
         },
       },
     ],

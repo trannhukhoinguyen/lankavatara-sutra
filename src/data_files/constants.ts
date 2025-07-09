@@ -3,12 +3,12 @@ import ogImageSrc from "@images/social.png";
 
 
 export const SITE = {
-  title: "Lankavatara sutra",
-  tagline: "Lankavatara sutra",
-  description: "Lankavatara sutra",
-  description_short: "Lankavatara sutra",
-  url: "https://lankavatara-sutra.vercel.app",
-  author: "Lankavatara sutra",
+  title: "Sudden enlightenment",
+  tagline: "Sudden enlightenment",
+  description: "Sudden enlightenment",
+  description_short: "Sudden enlightenment",
+  url: "https://sudden-enlightenment.vercel.app",
+  author: "Sudden enlightenment",
 };
 
 export const SEO = {
@@ -35,8 +35,8 @@ export const OG = {
   locale: "en_US",
   type: "website",
   url: SITE.url,
-  title: `${SITE.title}: : Lankavatara sutra`,
-  description: "Lankavatara sutra",
+  title: `${SITE.title}: : Sudden enlightenment`,
+  description: "Sudden enlightenment",
   image: ogImageSrc,
 };
 

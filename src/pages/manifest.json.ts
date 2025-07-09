@@ -44,8 +44,8 @@ export const GET: APIRoute = async () => {
   );
 
   const manifest = {
-    short_name: "Lankavatara sutra",
-    name: "Lankavatara sutra",
+    short_name: "Sudden enlightenment",
+    name: "Sudden enlightenment",
     icons,
     display: "minimal-ui",
     id: "/",

@@ -34,7 +34,7 @@ const { entry } = Astro.props;
 
 const pageTitle: string = `${entry.data.title} | ${SITE.title}`;
 const metaDescription = entry.data.description;
-const ogTitle = `${entry.data.title} | Lankavatara sutra | Lankavatara sutra`;
+const ogTitle = `${entry.data.title} | Sudden enlightenment | Sudden enlightenment`;
 ---
 
 <MainLayout
@@ -43,13 +43,13 @@ const ogTitle = `${entry.data.title} | Lankavatara sutra | Lankavatara sutra`;
   customOgTitle={ogTitle}
   structuredData={{
     "@context": "https://schema.org",
-    "@type": "Lankavatara sutra",
-    "@id": `https://lankavatara-sutra.vercel.app/sutras/${entry.data.title.toLowerCase().replace(/\s+/g, "-")}`,
+    "@type": "Sudden enlightenment",
+    "@id": `https://sudden-enlightenment.vercel.app/sutras/${entry.data.title.toLowerCase().replace(/\s+/g, "-")}`,
     name: entry.data.title,
     description: entry.data.description,
     brand: {
       "@type": "Brand",
-      name: "Lankavatara sutra",
+      name: "Sudden enlightenment",
     },
   }}
 >

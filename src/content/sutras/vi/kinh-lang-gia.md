@@ -1,12 +1,12 @@
 ---
 title: "Kinh Lăng Già 1"
-description: "Lankavatara sutra"
+description: "Sudden enlightenment"
 main:
   id: 1
-  content: Lankavatara sutra | Lankavatara sutra
+  content: Sudden enlightenment | Sudden enlightenment
   imgCard: "@/images/blueprint-1.avif"
   imgMain: "@/images/blueprint-2.avif"
-  imgAlt: "Lankavatara sutra"
+  imgAlt: "Sudden enlightenment"
   audioUrl: "http://tosuthien.info/audio_storage/htduyluc/kinhlanggia/kinh%20lang%20gia%201.mp3"
   videoUrl: "https://www.youtube.com/embed/vwOi8UCTCp0"
 tabs:
@@ -20,26 +20,26 @@ tabs:
     dataTab: "#tabs-with-card-3"
     title: "Plans"
 longDescription:
-  title: "Lankavatara sutra"
+  title: "Sudden enlightenment"
   subTitle: ""
-  btnTitle: "Lankavatara sutra"
+  btnTitle: "Sudden enlightenment"
   btnURL: "#"
 descriptionList:
-  - title: "Lankavatara sutra"
-    subTitle: "Lankavatara sutra"
-  - title: "Lankavatara sutra"
-    subTitle: "Lankavatara sutra"
-  - title: "Lankavatara sutra"
-    subTitle: "Lankavatara sutra"
+  - title: "Sudden enlightenment"
+    subTitle: "Sudden enlightenment"
+  - title: "Sudden enlightenment"
+    subTitle: "Sudden enlightenment"
+  - title: "Sudden enlightenment"
+    subTitle: "Sudden enlightenment"
 specificationsLeft:
-  - title: "Lankavatara sutra"
-    subTitle: "Lankavatara sutra."
-  - title: "Lankavatara sutra"
-    subTitle: "Lankavatara sutra"
-  - title: "Lankavatara sutra"
-    subTitle: "Lankavatara sutra"
-  - title: "Lankavatara sutra"
-    subTitle: "Lankavatara sutra"
+  - title: "Sudden enlightenment"
+    subTitle: "Sudden enlightenment."
+  - title: "Sudden enlightenment"
+    subTitle: "Sudden enlightenment"
+  - title: "Sudden enlightenment"
+    subTitle: "Sudden enlightenment"
+  - title: "Sudden enlightenment"
+    subTitle: "Sudden enlightenment"
 tableData:
   - feature: ["Spécification", "Valeur"]
     description:
