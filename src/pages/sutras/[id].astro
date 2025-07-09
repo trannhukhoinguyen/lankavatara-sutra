@@ -20,7 +20,7 @@ declare global {
 
 export async function getStaticPaths() {
   const entries = await getCollection("sutras", ({ id }) =>
-    id.startsWith("en/")
+    id.startsWith("vi/")
   );
   return entries.map((entry) => {
     const idWithoutLang = entry.id.replace(/^en\//, ""); // Remove the "en/" prefix
