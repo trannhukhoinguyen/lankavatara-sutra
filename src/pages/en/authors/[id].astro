@@ -34,16 +34,6 @@ const { entry } = Astro.props;
 const pageTitle: string = `${entry.data.title} | ${SITE.title}`;
 const metaDescription = entry.data.description;
 const ogTitle = `${entry.data.title} | Sudden enlightenment | Sudden enlightenment`;
-const post = {
-  data: {
-    videoUrls: [
-      '',
-    ],
-    audioUrls: [
-      '',
-    ],
-  }
-}
 ---
 
 <MainLayout
