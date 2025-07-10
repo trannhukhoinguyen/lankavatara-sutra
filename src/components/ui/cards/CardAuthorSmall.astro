@@ -18,9 +18,9 @@ const imageClass =
 
 <!-- A clickable card that leads to the details-->
 <a
-  href={authorLocale && authorLocale !== "en"
+  href={authorLocale && authorLocale !== "vi"
     ? `/${authorLocale}/authors/${author.id.replace(/^en\//, "")}/`
-    : `/authors/${author.id.replace(/^en\//, "")}/`}
+    : `/authors/${author.id.replace(/^vi\//, "")}/`}
   data-astro-prefetch
   class="group relative flex h-48 items-end overflow-hidden rounded-xl shadow-lg outline-hidden ring-zinc-500 focus-visible:ring-3 dark:ring-zinc-200 dark:focus:outline-hidden md:h-80"
 >

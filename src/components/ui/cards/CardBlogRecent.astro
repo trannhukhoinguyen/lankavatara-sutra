@@ -36,7 +36,9 @@ interface Props {
     >
       <a
         class="outline-hidden ring-zinc-500 transition duration-300 hover:text-orange-400 focus-visible:ring-3 dark:text-neutral-300 dark:ring-zinc-200 dark:hover:text-neutral-50 dark:focus:outline-hidden"
-        href={recentBlogLocale && recentBlogLocale !== "en" ? `/${recentBlogLocale}/blog/${blogEntry.id.replace(/^fr\//, '')}/` : `/blog/${blogEntry.id.replace(/^en\//, '')}/`}
+        href={recentBlogLocale && recentBlogLocale !== "vi"
+          ? `/${recentBlogLocale}/blog/${blogEntry.id.replace(/^en\//, '')}/`
+          : `/blog/${blogEntry.id.replace(/^vi\//, '')}/`}
       >
         {blogEntry.data.description}
       </a>

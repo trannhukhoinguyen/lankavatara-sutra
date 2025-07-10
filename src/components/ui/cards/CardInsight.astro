@@ -7,7 +7,7 @@ import type { CollectionEntry } from "astro:content";
 const {
   insightEntry,
   insightLocale,
-  label = Astro.currentLocale === "vi" ? "Sudden enlightenment" : "Read more",
+  label = Astro.currentLocale === "vi" ? "Sudden enlightenment" : "Sudden enlightenment",
 } = Astro.props;
 
 interface Props {
@@ -20,9 +20,9 @@ interface Props {
 <!-- The anchor tag is the root container for the "Insight" card. It links to the insight detail page. -->
 <a
   class="group rounded-xl outline-hidden ring-zinc-500 transition duration-300 focus-visible:ring-3 dark:ring-zinc-200 dark:focus:outline-hidden"
-  href={insightLocale && insightLocale !== "en"
+  href={insightLocale && insightLocale !== "vi"
     ? `/${insightLocale}/insights/${insightEntry.id.replace(/^en\//, "")}/`
-    : `/insights/${insightEntry.id.replace(/^en\//, "")}/`}
+    : `/insights/${insightEntry.id.replace(/^vi\//, "")}/`}
 >
   <!-- This is the container for the insight's cover image. -->
   <div class="relative overflow-hidden rounded-xl pt-[50%] sm:pt-[70%]">
