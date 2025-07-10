@@ -3,21 +3,12 @@
 import MainLayout from "@/layouts/MainLayout.astro";
 import HeroSection from "@components/sections/landing/HeroSection.astro";
 import HeroSectionAlt from "@components/sections/landing/HeroSectionAlt.astro";
-import ClientsSection from "@components/sections/landing/ClientsSection.astro";
 import FeaturesGeneral from "@components/sections/features/FeaturesGeneral.astro";
-import FeaturesNavs from "@components/sections/features/FeaturesNavs.astro";
-import PricingSection from "@components/sections/pricing/PricingSection.astro";
 import FAQ from "@components/sections/misc/FAQ.astro";
-import AnnouncementBanner from "@components/ui/banners/AnnouncementBanner.astro";
 import heroImage from "@images/hero-image.avif";
 import faqs from "@data/faqs.json";
 import features from "@data/features.json";
-import pricing from "@data/pricing.json";
 import featureImage from "@images/features-image.avif";
-import construction from "@images/construction-image.avif";
-import tools from "@images/automated-tools.avif";
-import dashboard from "@images/dashboard-image.avif";
-import { partnersData } from "@/data_files/constants";
 
 const avatarSrcs: Array<string> = [
   "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80",
@@ -39,12 +30,6 @@ const primaryBtn = "Start Sudden enlightenment";
 ---
 
 <MainLayout>
-  <AnnouncementBanner
-    btnId="dismiss-button"
-    btnTitle={btnTitle}
-    url={url}
-  />
-
   <HeroSection
     title=`<span class="text-yellow-500 dark:text-yellow-400">{title}</span>`
     subTitle={subTitle}
@@ -59,12 +44,6 @@ const primaryBtn = "Start Sudden enlightenment";
     alt={alt}
   />
 
-  <ClientsSection
-    title={title}
-    subTitle={subTitle}
-    partners={partnersData}
-  />
-
   <FeaturesGeneral
     title={title}
     subTitle={subTitle}
@@ -72,37 +51,6 @@ const primaryBtn = "Start Sudden enlightenment";
     alt={alt}
     features={features}
   />
-
-  <FeaturesNavs
-    title=`<span class="text-yellow-500 dark:text-yellow-400">{title}</span>`
-    tabs={[
-      {
-        heading: heading,
-        content: content,
-        svg: "tools",
-        src: tools,
-        alt: alt,
-        first: true,
-      },
-      {
-        heading: heading,
-        content: content,
-        svg: "dashboard",
-        src: dashboard,
-        alt: alt,
-        second: true,
-      },
-      {
-        heading: heading,
-        content: content,
-        svg: "house",
-        src: construction,
-        alt: alt,
-      },
-    ]}
-  />
-
-  <PricingSection pricing={pricing} />
 
   <FAQ title={title} faqs={faqs} />
 

@@ -1,6 +1,6 @@
 ---
 // Import the necessary dependencies
-import GithubBtn from "@components/ui/buttons/GithubBtn.astro";
+import MediaArea from "../../MediaArea.astro";
 
 // Define props from Astro
 const { title, subTitle, url } = Astro.props;
@@ -134,12 +134,7 @@ interface Props {
       )
     }
   </div>
-  <!-- Github Button -->
-  {
-    url && (
-      <div class="mt-8 flex justify-center gap-3">
-        <GithubBtn url={url} title={btnTitle}/>
-      </div>
-    )
-  }
+
+  <!-- Media Players -->
+  <MediaArea post={post}></MediaArea>
 </section>

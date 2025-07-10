@@ -1,10 +1,10 @@
 
 const navBarLinks = [
   { name: "Home", url: "/en" },
+  { name: "Authors", url: "/en/authors" },
   { name: "Sutras", url: "/en/sutras" },
   { name: "TOC Insights", url: "/en/insights" },
   { name: "Blog", url: "/en/blog" },
-  { name: "Services", url: "/en/services" },
 ];
 
 const footerLinks = [
@@ -12,7 +12,6 @@ const footerLinks = [
     section: "Système",
     links: [
       { name: "Documentation", url: "/en/welcome-to-docs/" },
-      { name: "Sutras", url: "/en/sutras" },
       { name: "Services", url: "/en/services" },
     ],
   },
@@ -21,7 +20,7 @@ const footerLinks = [
 const socialLinks = {
   facebook: "#",
   x: "#",
-  youtube: "https://youtube.com/T%C3%B4ngPhongT%E1%BB%95S%C6%B0Thi%E1%BB%81n",
+  youtube: "https://youtube.com",
   google: "#",
   slack: "#",
 };

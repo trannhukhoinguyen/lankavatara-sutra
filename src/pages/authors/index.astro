@@ -1,0 +1,97 @@
+---
+// Importing necessary components
+import MainLayout from "@/layouts/MainLayout.astro";
+import CardAuthorSmall from "@components/ui/cards/CardAuthorSmall.astro";
+import CardAuthorWide from "@components/ui/cards/CardAuthorWide.astro";
+import FeaturesStatsAlt from "@components/sections/features/FeaturesStatsAlt.astro";
+
+// Importing necessary functions from Astro
+import { getCollection } from "astro:content";
+import type { CollectionEntry } from "astro:content";
+import { SITE } from "@data/constants";
+
+// Fetching all the author related content and sorting it by main.id
+const author: CollectionEntry<"authors">[] = (
+  await getCollection("authors", ({ id }) => {
+    return id.startsWith("vi/");
+  })
+).sort(
+  (a: CollectionEntry<"authors">, b: CollectionEntry<"authors">) =>
+    a.data.main.id - b.data.main.id
+);
+
+// Define variables for page content
+const title: string = "Sudden enlightenment";
+const subTitle: string = "Sudden enlightenment";
+const pageTitle: string = `authors | ${SITE.title}`;
+const metaDescription = "Sudden enlightenment";
+const ogTitle = "Sudden enlightenment | Sudden enlightenment";
+---
+
+<MainLayout
+  title={pageTitle}
+  customDescription={metaDescription}
+  customOgTitle={ogTitle}
+  structuredData={{
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://sudden-enlightenment.vercel.app/authors",
+    url: "https://sudden-enlightenment.vercel.app/authors",
+    name: "Sudden enlightenment",
+    description: "Sudden enlightenment",
+    isPartOf: {
+      "@type": "WebSite",
+      url: "https://sudden-enlightenment.vercel.app/",
+      name: "Sudden enlightenment",
+      description: "Sudden enlightenment",
+    },
+    inLanguage: "vi",
+  }}
+>
+  <div
+    class="mx-auto max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 2xl:max-w-full"
+  >
+    <div class="mb-4 flex items-center justify-between gap-8 sm:mb-8 md:mb-12">
+      <div class="flex items-center gap-12">
+        <h1
+          class="text-2xl font-bold tracking-tight text-balance text-neutral-800 md:text-4xl md:leading-tight dark:text-neutral-200"
+        >
+          {title}
+        </h1>
+        {
+          subTitle && (
+            <p class="hidden max-w-(--breakpoint-sm) text-pretty text-neutral-600 md:block dark:text-neutral-400">
+              {subTitle}
+            </p>
+          )
+        }
+      </div>
+
+    </div>
+    {/* Displaying them in alternating styles. Alternative one gets different card styling.
+    Maps through all entries and displays them with either CardSmall or CardWide based on their position. */}
+    <section class="grid grid-cols-1 gap-4 sm:grid-cols-3 md:gap-6 xl:gap-8">
+      {
+        author.map((author, index) => {
+          const position = index % 4;
+          if (position === 0 || position === 3) {
+            return <CardAuthorSmall author={author} />;
+          } else {
+            return <CardAuthorWide author={author} />;
+          }
+        })
+      }
+    </section>
+  </div>
+  {/* Features statistics section */}
+  <FeaturesStatsAlt
+    title="Sudden enlightenment"
+    subTitle="Sudden enlightenment"
+    benefits={[
+      "Sudden enlightenment",
+      "Sudden enlightenment",
+      "Sudden enlightenment",
+    ]}
+  />
+
+</MainLayout>

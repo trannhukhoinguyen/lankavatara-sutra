@@ -1,10 +1,10 @@
 // An array of links for navigation bar
 const navBarLinks = [
   { name: "Trang chủ", url: "/" },
+  { name: "Tác giả", url: "/authors" },
   { name: "Kinh", url: "/sutras" },
   { name: "Giáo pháp", url: "/insights" },
   { name: "Blog", url: "/blog" },
-  { name: "Dịch vụ", url: "/services" },
 ];
 // An array of links for footer
 const footerLinks = [
@@ -12,7 +12,6 @@ const footerLinks = [
     section: "Ecosystem",
     links: [
       { name: "Bài hướng dẫn", url: "/welcome-to-docs/" },
-      { name: "Kinh Lăng Già", url: "/sutras" },
       { name: "Dịch vụ", url: "/services" },
     ],
   },
