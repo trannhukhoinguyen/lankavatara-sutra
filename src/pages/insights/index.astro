@@ -7,7 +7,7 @@ import type { CollectionEntry } from "astro:content";
 import { SITE } from "@data/constants";
 
 const englishInsightsEntries = await getCollection("insights", ({ id }) => {
-  return id.startsWith("vi/");
+  return id.startsWith("/");
 });
 const insightPosts: CollectionEntry<"insights">[] = englishInsightsEntries;
 

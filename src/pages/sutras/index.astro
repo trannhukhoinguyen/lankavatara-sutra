@@ -14,7 +14,7 @@ import { SITE } from "@data/constants";
 // Fetching all the sutra related content and sorting it by main.id
 const sutra: CollectionEntry<"sutras">[] = (
   await getCollection("sutras", ({ id }) => {
-    return id.startsWith("vi/");
+    return id.startsWith("/");
   })
 ).sort(
   (a: CollectionEntry<"sutras">, b: CollectionEntry<"sutras">) =>
