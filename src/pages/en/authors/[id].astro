@@ -6,8 +6,6 @@ import PrimaryCTA from "@components/ui/buttons/PrimaryCTA.astro";
 import { Image } from "astro:assets";
 import { getCollection } from "astro:content";
 import { SITE } from "@data/constants";
-import LogoYoutube from "@components/LogoYoutube.astro";
-import MediaArea from "../../../components/MediaArea.astro";
 
 // Global declaration for gsap animation library
 declare global {
@@ -36,6 +34,16 @@ const { entry } = Astro.props;
 const pageTitle: string = `${entry.data.title} | ${SITE.title}`;
 const metaDescription = entry.data.description;
 const ogTitle = `${entry.data.title} | Sudden enlightenment | Sudden enlightenment`;
+const post = {
+  data: {
+    videoUrls: [
+      '',
+    ],
+    audioUrls: [
+      '',
+    ],
+  }
+}
 ---
 
 <MainLayout

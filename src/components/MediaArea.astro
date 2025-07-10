@@ -26,8 +26,8 @@ const { post } = Astro.props;
               class="w-full h-full"
             ></iframe>     -->
             <iframe
-              src={post?.data.videoUrl}
-              title={post?.data.title}
+              src={url}
+              title={post?.data.title + index + 1}
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen
               width="100%"
